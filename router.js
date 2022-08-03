@@ -8,6 +8,7 @@ router.get("/blog-static", function (ctx) {
         shell.cd('/var/www')
         shell.rm('-rf', 'blog-static')
         shell.exec('git clone git@github.com:ALittleSuperman/blog-static.git')
+        shell.exit()
         logger.info("博客部署成功")
         ctx.body = {
             message: "博客部署成功",
