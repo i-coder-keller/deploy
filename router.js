@@ -16,7 +16,7 @@ router.get("/blog-static", function (ctx) {
             code: 200
         }
     }catch (e) {
-        logger.info(`博客部署失败：${JSON.stringify(e)}`)
+        logger.error(`博客部署失败：${JSON.stringify(e)}`)
         ctx.body = {
             message: "博客部署失败",
             data: e,

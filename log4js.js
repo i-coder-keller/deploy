@@ -7,7 +7,6 @@ log4js.configure({
             filename: 'logs/log',
             pattern: '-yyyy-MM-dd.log',
             alwaysIncludePattern: true,
-            category: 'DEBUG'
         }
     },
     categories: { default: { appenders: ['debug'], level: 'info' } }
