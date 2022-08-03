@@ -5,10 +5,10 @@ const { logger } = require('./log4js')
 const router = new Router({prefix: '/deploy'})
 router.get("/blog-static", function (ctx) {
     try {
-        shell.cd('/var/www')
-        shell.rm('-rf', 'blog-static')
-        shell.exec('git clone git@github.com:ALittleSuperman/blog-static.git')
-        shell.exit()
+        // shell.cd('/var/www')
+        // shell.rm('-rf', 'blog-static')
+        // shell.exec('git clone git@github.com:ALittleSuperman/blog-static.git')
+        // shell.exit()
         logger.info("博客部署成功")
         ctx.body = {
             message: "博客部署成功",

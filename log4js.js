@@ -6,11 +6,12 @@ log4js.configure({
             type: 'DateFile',
             filename: 'logs/log',
             pattern: '-yyyy-MM-dd.log',
+            alwaysIncludePattern: true,
         }
     },
     categories: { default: { appenders: ['everything'], level: 'info' } }
 })
 
 module.exports = {
-    logger: log4js.getLogger()
+    logger: log4js.getLogger('everything')
 }
